@@ -3586,8 +3586,8 @@ static ERL_NIF_TERM ecl_create_buffer(ErlNifEnv* env, int argc,
 	if (size < bin.size)
 	    size = bin.size;
     }
-    else if (size)
-	mem_flags |= CL_MEM_ALLOC_HOST_PTR;
+//    else if (size)
+//	mem_flags |= CL_MEM_ALLOC_HOST_PTR;
 
     mem = clCreateBuffer(o_context->context, mem_flags, size,
 			 host_ptr, &err);
